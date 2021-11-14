@@ -1,0 +1,30 @@
+@mixin onSeatCursor($cursor, $transformScale) {
+  cursor: $cursor;
+  transform: scale($transformScale);
+}
+
+@mixin flex($alignItems, $justifyContent, $flexDirection: row) {
+  display: flex;
+  flex-direction: $flexDirection;
+  @if $alignItems {
+    align-items: $alignItems;
+  }
+
+  @if $justifyContent {
+    justify-content: $justifyContent;
+  }
+}
+
+@mixin backgroundAndRadius($color, $radius) {
+  background-color: $color;
+  border-radius: $radius;
+}
+
+@mixin size($height, $width, $margin) {
+  height: $height;
+  width: $width;
+  margin: $margin;
+}
+// flex/align/justify
+
+// background/border-radius
